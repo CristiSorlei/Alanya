@@ -117,7 +117,7 @@ body, h1, h2, h3, p {
     }
 
     .search-container {
-        width: 80%;
+        width: 90%;
         margin-top:200px;
         height:10%;
     }
@@ -134,18 +134,18 @@ body, h1, h2, h3, p {
         font-size: 16px;
         height:88%;
         width:35%;
-        font-size:50px;
+        font-size:30px;
     }
 
     .search-text {
         padding-top:20px;
-        margin-bottom:-800px;
+        margin-bottom:-380px;
         height:40%;
-        width:40%;
+        width:60%;
     }
 
     .search-text p.paragraph {
-        font-size: 60px; /* Mărimea fontului mai mare */
+        font-size: 30px; /* Mărimea fontului mai mare */
         font-family: cOOPER, sans-serif; /* Familia fontului */
         font-weight: bold; /* Text bold */
         line-height: 1.6; /* Înălțimea liniei pentru spațierea textului */
