@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rent a car Alanya</title>
+
+
+<style>
+
+body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .ContainerCars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .ContainerCars img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .container-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            padding-top:55px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            width: 33.33%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Container {
+            text-align: center;
+            width: 80%;
+            margin: 14px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius:30px;
+        }
+
+        .Container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .Container p {
+            margin: 10px 0;
+            font-size: 35px;
+            font-family: impact;
+        }
+
+        .Container button {
+        background-color: #fe8c00;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .Container button:hover {
+        background-color: #45a049;
+    }
+    
+
+
+</style>
+
+
+
+
+
+</head>
+
+
+
+<body>
+
+    <div class="ContainerCars">
+        <img src="RentCar.jpg" alt="Imagine de fundal">
+    </div>
+
+
+
+    <div class="container-wrapper">
+        <div class="column">
+            <div class="Container">
+                <img src="Kayak.jpg" alt="Imagine 1">
+                <p>Kayak</p>
+                <button onclick="window.open('https://www.kayak.com/Alanya-Coast-Car-Rentals.f225.crr.html?r9ck=iq&gclid=Cj0KCQjwuNemBhCBARIsADp74QRq2Pwauz0P-LvXI-ekpTOAhmoQjSVwFyFhGuHg2bDJDH0pPosbhlUaAhjpEALw_wcB', '_blank')">Go to site</button>
+            </div>
+
+            <div class="Container">
+                <img src="Momondo.jpg" alt="Imagine 2">
+                <p>Momondo</p>
+                <button onclick="window.open('https://www.momondo.com/car-rental/Alanya-22056?gclid=Cj0KCQjwuNemBhCBARIsADp74QRpP5IAv5YhOFlG2Ips4wymYmH1Umfdvc77KGIz0Coj2_GnlP3g_nYaAmxGEALw_wcB&aid=144011094607', '_blank')">Go to site</button>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="Container">
+                <img src="Europcar.jpg" alt="Imagine 3">
+                <p>Europcar</p>
+                <button onclick="window.open('https://www.europcar.com/en/car-rental/locations/turkey/alanya', '_blank')">Go to site</button>
+            </div>
+
+            <div class="Container">
+                <img src="RentalCars.jpg" alt="Imagine 4">
+                <p>Rentalcars</p>
+                <button onclick="window.open('https://www.rentalcars.com/en/city/tr/alanya/', '_blank')">Go to site</button>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="Container">
+                <img src="localrent.jpg" alt="Imagine 5">
+                <p>Localrent</p>
+                <button onclick="window.open('https://localrent.com/en/turkey/alanya/', '_blank')">Go to site</button>
+            </div>
+
+            <div class="Container">
+                <img src="Tripadvisor.jpg" alt="Imagine 6">
+                <p>Tripadvisor</p>
+                <button onclick="window.open('https://www.tripadvisor.com/RentalCars-g297961-Alanya_Turkish_Mediterranean_Coast.html', '_blank')">Go to site</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>

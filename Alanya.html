@@ -1,0 +1,140 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Titlul Site-ului</title>
+
+
+        <script>
+
+
+function checkSearch() {
+    const searchTerm = document.querySelector(".search-bar").value.toLowerCase();
+
+    const targetWordHouse = "rent house";
+    const targetWordApartment = "rent apartment";
+    const targetWordCar = 'rent car';
+    const additionalWords = ['rent bike', 'rent scooter', 'rent motorcycle'];
+    const TouristAttractions = ['tourist','visit','museum','cave','attractions', 'objectives', 'places of interest', 'landmarks', 'tourist spots', 'cultural sites', 'destinations'];
+    const Trips = ['trip', 'excursio', 'journe', '4wd', 'jeep', 'safari', 'expedition', 'tour', 'vacation', 'itinerari'];
+    const Restaurants = ['restaurant','top','best','eat','food','deliciou','keba','bistro','cafe','pizz','dine','gri','hous'];
+    const Shopping = ['shop','center','bazar','mall','pazari', 'market'];
+
+
+    if (!searchContainsWords(searchTerm, targetWordHouse, targetWordApartment, ...Shopping, targetWordCar, ...additionalWords, ...TouristAttractions, ...Trips, ...Restaurants)) {
+        showPopup("Be more specific please! ‎😃");
+        return;
+    }
+
+    if (searchContainsWords(searchTerm, targetWordHouse, targetWordApartment)) {
+        window.open("pagina-rent.html", "_blank");
+    } else if (searchContainsWords(searchTerm, targetWordCar, ...additionalWords)) {
+        window.open("pagina-rent-car.html", "_blank");
+    }
+        else if (searchContainsWords(searchTerm, ...TouristAttractions)) {
+            window.open("https://antalyatouristinformation.com/things-to-do/alanya/", "_blank");
+        }
+
+        else if (searchContainsWords(searchTerm, ...Trips)) {
+            window.open("https://www.tripadvisor.com/Attractions-g297961-Activities-Alanya_Turkish_Mediterranean_Coast.html", "_blank");
+        }
+
+        else if (searchContainsWords(searchTerm, ...Restaurants)) {
+            window.open("https://www.tripadvisor.com/Restaurants-g297961-Alanya_Turkish_Mediterranean_Coast.html", "_blank");
+        }
+
+        else if (searchContainsWords(searchTerm, ...Shopping)) {
+            window.open("https://www.tripadvisor.com/Attractions-g297961-Activities-c26-Alanya_Turkish_Mediterranean_Coast.html", "_blank");
+        }
+}
+
+
+
+
+
+
+        function showPopup(message) {
+
+        const popup = document.createElement("div");
+        popup.classList.add("popup");
+
+        const popupText = document.createElement("p");
+        popupText.innerText = message;
+
+        popup.appendChild(popupText);
+
+        document.body.appendChild(popup);
+
+        setTimeout(() => {
+        popup.remove(); 
+        }, 3000);
+
+        }
+
+
+
+
+        
+        function searchContainsWords(searchTerm, ...targetWords) {
+    const searchTermLowerCase = searchTerm.toLowerCase();
+    
+    for (const targetWord of targetWords) {
+        const targetWordParts = targetWord.split(" ");
+        let allWordsFound = true;
+        
+        for (const part of targetWordParts) {
+            if (!searchTermLowerCase.includes(part)) {
+                allWordsFound = false;
+                break;
+            }
+        }
+        
+        if (allWordsFound) {
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.querySelector(".search-bar");
+
+            searchInput.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    checkSearch();
+                }
+            });
+        });
+
+
+
+        </script>
+
+    </head>
+    <body>
+
+    
+        <div class="hero">
+
+            <div class="search-text">
+                <p class="paragraph">Type what you want to search for in Alanya.<br>For example: rents, trips, famous restaurants, etc.</p>
+            </div>
+
+            <img src="Alanya4.jpg" alt="Imagine de fundal">
+
+            <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button class="search-button" onclick="checkSearch()">Search</button>
+    </div>
+
+
+        </div>
+    </body>
+    </html>

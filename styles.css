@@ -1,0 +1,154 @@
+/* Resetare a marginilor și a padding-ului implicite */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.search-text {
+    position: absolute;
+    bottom: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px rgb(255, 111, 0);
+    background-color: #fff;
+    border: 10px solid #ff6a00
+    
+}
+/* Stilizare pentru imaginea de fundal */
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Stilizare pentru căutare */
+.search-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 650px;
+    height:65px;
+}
+
+.search-bar {
+    width: 70%;
+    padding: 8px;
+    border: none;
+    border-radius: 15px 0 0 15px;
+    outline: none;
+    width: 650px;
+    height:60px;
+    font-size: 22px;
+}
+
+.search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    padding: 30px 40px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.search-button:hover {
+    background-color: rgb(255, 106, 0);
+    box-shadow: 0 0 10px #ffcc00;
+}
+
+
+
+.search-text p {
+    font-size: 18px; /* Mărimea fontului */
+    line-height: 1.4; /* Înălțimea liniei pentru spațierea textului */
+    color: #555; /* Culorea textului */
+}
+
+.search-text p.paragraph {
+    font-size: 30px; /* Mărimea fontului mai mare */
+    font-family: cOOPER, sans-serif; /* Familia fontului */
+    font-weight: bold; /* Text bold */
+    line-height: 1.6; /* Înălțimea liniei pentru spațierea textului */
+    color: #ff7b00; /* Culoarea textului */
+}
+
+.popup {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 89, 0);
+    padding: 20px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    font-size:30px;
+    font-family: Cooper;
+  }
+
+  
+  @media (max-width: 1500px) {
+    /* Stiluri pentru ecrane de dimensiune mică, cum ar fi telefoane */
+    .hero img {
+        object-fit: contain;
+        height: 100vh;
+        width: auto;
+        padding-right:300px;
+    }
+
+    .search-container {
+        width: 80%;
+        margin-top:200px;
+        height:10%;
+    }
+
+    .search-bar {
+        width: 80%;
+        padding: 5px;
+        font-size: 50px;
+        height:88%;
+    }
+
+    .search-button {
+        padding: 15px 20px;
+        font-size: 16px;
+        height:88%;
+        width:35%;
+        font-size:50px;
+    }
+
+    .search-text {
+        padding-top:20px;
+        margin-bottom:-800px;
+        height:40%;
+        width:40%;
+    }
+
+    .search-text p.paragraph {
+        font-size: 60px; /* Mărimea fontului mai mare */
+        font-family: cOOPER, sans-serif; /* Familia fontului */
+        font-weight: bold; /* Text bold */
+        line-height: 1.6; /* Înălțimea liniei pentru spațierea textului */
+        color: #ff7b00; /* Culoarea textului */
+    }   
+}

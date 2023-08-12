@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .ContainerHouses {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .ContainerHouses img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            padding-top:55px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            width: 33.33%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Container {
+            text-align: center;
+            width: 80%;
+            margin: 14px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius:30px;
+        }
+
+        .Container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .Container p {
+            margin: 10px 0;
+            font-size: 35px;
+            font-family: impact;
+        }
+
+        .Container button {
+        background-color: #fe8c00;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .Container button:hover {
+        background-color: #45a049;
+    }
+    </style>
+
+
+    <title>House rents in Alanya</title>
+</head>
+
+<body>
+    <div class="ContainerHouses">
+        <img src="AlanyaHouses.jpg" alt="Imagine de fundal">
+    </div>
+
+    <div class="container-wrapper">
+        <div class="column">
+            <div class="Container">
+                <img src="Zingat.jpg" alt="Imagine 1">
+                <p>Zingat</p>
+                <button onclick="window.open('https://www.zingat.com/en/alanya-for-rent', '_blank')">Go to site</button>
+            </div>
+
+            <div class="Container">
+                <img src="Sahibiden.jpg" alt="Imagine 2">
+                <p>Sahibiden</p>
+                <button onclick="window.open('https://www.sahibinden.com/en/for-rent/antalya-alanya/real-estate-agency', '_blank')">Go to site</button>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="Container">
+                <img src="Airbnb.jpg" alt="Imagine 3">
+                <p>Airbnb</p>
+                <button onclick="window.open('https://www.airbnb.com/alanya-turkiye/stays', '_blank')">Go to site</button>
+            </div>
+
+            <div class="Container">
+                <img src="TurkEstate.jpg" alt="Imagine 4">
+                <p>Turk Estate</p>
+                <button onclick="window.open('https://turk.estate/en/rent/property-for-rent-in-alanya/', '_blank')">Go to site</button>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="Container">
+                <img src="Rentola.jpg" alt="Imagine 5">
+                <p>Rentola</p>
+                <button onclick="window.open('https://rentola.com/for-rent/alanya', '_blank')">Go to site</button>
+            </div>
+
+            <div class="Container">
+                <img src="AlanyaRentals.jpg" alt="Imagine 6">
+                <p>Alanya Properties</p>
+                <button onclick="window.open('https://www.alanyaproperties.com/property-in-turkey/apartments-for-rent/', '_blank')">Go to site</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
